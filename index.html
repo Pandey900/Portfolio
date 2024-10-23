@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Abhishek Pandey - Snake Game & Portfolio</title>
+  </head>
+  <body>
+    <!-- Game Section -->
+    <section id="gameSection">
+      <h2>Play Snake Game</h2>
+      <form id="scoreLimitForm">
+        <label for="scoreLimit">Set Score Limit (0 to skip game): </label>
+        <input type="number" id="scoreLimit" min="0" value="10" />
+        <button type="button" id="startGame">Start Game</button>
+      </form>
+      <canvas
+        id="snakeGame"
+        width="400"
+        height="400"
+        style="display: none"
+      ></canvas>
+      <p id="gameInstructions" style="display: none">
+        Reach the score limit to unlock the website!
+      </p>
+    </section>
+
+    <!-- Full Website (Profile, Resume, Projects, Contact) -->
+    <div id="contentSection" style="display: none">
+      <header>
+        <h1>Abhishek Pandey</h1>
+        <img src="./assets/images/image.png" alt="Profile" height="200" />
+      </header>
+
+      <!-- Summary Section -->
+      <section id="summary">
+        <h2>Summary</h2>
+        <p>
+          I am a passionate Software Developer with expertise in creating
+          innovative solutions and delivering high-quality code.
+        </p>
+        <a href="./public/about.html" class="download-button"
+          >Learn More About Me</a
+        >
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+          <li>
+            <h3>MovieHunt</h3>
+            <a href="./public/MovieHunt.html">
+              <img
+                src="./assets/images/Movie.png"
+                alt="MovieHunt Project"
+                class="project-image"
+              />
+            </a>
+            <p>
+              A web application for discovering and exploring movies. Click the
+              image to learn more about this project.
+            </p>
+          </li>
+          <li>
+            <h3>MindMatters</h3>
+            <a href="./public/MindMatters.html">
+              <img
+                src="./assets/images/MindMatters.png"
+                alt="MindMatters Project"
+                class="project-image"
+              />
+            </a>
+            <p>
+              An innovative platform focusing on mental health and well-being.
+              Click the image to explore this project.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Resume Section -->
+      <section id="resume">
+        <h2>My Resume</h2>
+        <a
+          href="assets/Resume/My Resume.pdf"
+          download="Resume.pdf"
+          class="download-button"
+          >Download My Resume</a
+        >
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <a href="./public/contact.html" class="download-button">Get in Touch</a>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 Abhishek Pandey. All Rights Reserved</p>
+      </footer>
+    </div>
+
+    <script src="Script.js"></script>
+  </body>
+</html>

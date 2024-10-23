@@ -1,0 +1,214 @@
+:root {
+  --bg-color: #2c3e50;
+  --text-color: #ecf0f1;
+  --heading-color: #f1c40f;
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+  --link-color: #3498db;
+  --link-hover-color: #e74c3c;
+  --hr-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 15px;
+  color: var(--heading-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2em;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: var(--secondary-color);
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--hr-color);
+  margin: 40px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--link-hover-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.project-image {
+  float: right;
+  max-height: 150px;
+  width: auto;
+  margin-left: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-description {
+  overflow: hidden;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  font-size: 0.9em;
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: var(--link-hover-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Snake Game Styles */
+#gameSection {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+canvas#snakeGame {
+  border: 5px solid var(--primary-color);
+  border-radius: 15px;
+  background-color: #1abc9c;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  display: block;
+}
+
+#gameSection h2 {
+  color: var(--primary-color);
+}
+
+#gameSection p {
+  color: var(--text-color);
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .project-image {
+    float: none;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
